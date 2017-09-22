@@ -42,7 +42,7 @@ public class Main
 				
 				GenerateAndDownloadHashWSLoginServiceLocator serviceLocator = new GenerateAndDownloadHashWSLoginServiceLocator();
 				GenerateAndDownloadHashWSLoginSoapBindingStub stub = new GenerateAndDownloadHashWSLoginSoapBindingStub(new URL(endpoint), serviceLocator);
-				((org.apache.axis.client.Stub)stub).setTimeout(3600000);
+				((org.apache.axis.client.Stub)stub).setTimeout(10800000);
 
 				Result r = stub.generateAndDownloadHashLogin(remoteFolder, algorithm, modeParam, userName, password);
 				if(r != null)
